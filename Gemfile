@@ -10,6 +10,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'chart-js-rails', '~> 0.1.4'
+gem 'bootsnap', '>= 1.1.0', require: false
+gem 'gon', '~> 6.2.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
