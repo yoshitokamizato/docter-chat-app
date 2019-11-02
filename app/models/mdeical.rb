@@ -1,0 +1,2 @@
+class Mdeical < ApplicationRecord
+end
