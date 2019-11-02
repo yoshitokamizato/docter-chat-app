@@ -1,5 +1,7 @@
 {
-  "name": "docter-chat-app",
-  "private": true,
-  "dependencies": {}
+    "name": "docter-chat-app",
+    "private": true,
+    "dependencies": {
+        "chart.js": "^2.7.1"
+    }
 }
