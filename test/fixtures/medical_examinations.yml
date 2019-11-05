@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weight: 1.5
+  temp: 1.5
+  SYS: 1
+  DIA: 1
+  memo: MyText
+  user_id: 1
+
+two:
+  weight: 1.5
+  temp: 1.5
+  SYS: 1
+  DIA: 1
+  memo: MyText
+  user_id: 1
