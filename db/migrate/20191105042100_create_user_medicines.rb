@@ -1,9 +1,8 @@
 class CreateUserMedicines < ActiveRecord::Migration[5.2]
   def change
     create_table :user_medicines do |t|
-      t.integer :user_id
-      t.integer :medicine_id
       t.references :medicine
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
