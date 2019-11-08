@@ -3,7 +3,7 @@ namespace :import_csv do
     desc "hospitalのcsvデータのインポート"
 
     task hospitals: :environment do
-        Hospital.import('db/csv_data/hospital_data.csv')
+        ImportCsv.import('db/csv_data/hospital_data.csv')
     end
 
 end
