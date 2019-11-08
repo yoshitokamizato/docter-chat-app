@@ -1,4 +1,4 @@
-class  import_csv < ApplicationRecord
+class  ImportCsv < ApplicationRecord
 
     def self.import(path)
         list = []
