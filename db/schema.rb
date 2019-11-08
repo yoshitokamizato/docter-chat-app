@@ -11,10 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_11_02_144449) do
 =======
 ActiveRecord::Schema.define(version: 2019_11_02_072036) do
 >>>>>>> 38a663b9a87291654771e8348a686206a5658a68
+=======
+ActiveRecord::Schema.define(version: 2019_11_04_042658) do
+>>>>>>> 4850773209594b1ce7542c1843f9f4c00cfa9fbb
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -55,6 +59,11 @@ ActiveRecord::Schema.define(version: 2019_11_02_072036) do
     t.string "name"
     t.string "address"
     t.integer "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "import_csvs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
