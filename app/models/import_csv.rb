@@ -1,6 +1,6 @@
 class ImportCsv < ApplicationRecord
 
-    def self.import(path)
+    def self.hospital_data(path)
         list = []
         CSV.foreach(path, headers: true) do |row|
             list << {
