@@ -6,6 +6,9 @@
   <p> 最低血圧:<%=f.text_field :diastorlic_bp %> </p>
   <input type="submit" value="送信">
 <% end %>
-
+<% @medical_exams.each do |exam| %>
+  <p><%= exam.user.nickname %></p>
+  <p><%= exam. %></p>
+<% end %>
 <canvas id="myChart" width="200" height="100"></canvas>
 <script>draw_graph();</script> 

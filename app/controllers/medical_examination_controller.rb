@@ -10,7 +10,8 @@ class MedicalExaminationController < ApplicationController
       sum = sum + data
       gon.linedata << sum
     end
-    
+
+    @medical_exams = MedicalExamination.all
   end
 
   def new
@@ -18,27 +19,23 @@ class MedicalExaminationController < ApplicationController
   end
 
   def create
-    MedicalExamination.create(medical_exam_params)
-    redirect to action: :index
+    @medical_exam = MedicalExamination.new( weight: params[:weight],body_temp: params[:body_temp],systolic_bp: params[:systolic_bp],diastorlic_bp: params[:diastorlic_bp],user_id: current_user.id)
+    if @medical_exam.save
+      redirect_to action: :index
+    end
   end
 
   def edit
-    
   end
 
   def show
   end
-
   
-
   def update
   end
   
   def destroy
   end
 
-  def medical_exam_params
-    params.require(:medical_examination).permit(:weight,:body_temp,:systolic_bp,:diastorlic_bp,:created_at,:updated_at)
-  end
 
 end
