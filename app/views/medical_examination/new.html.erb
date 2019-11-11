@@ -1,5 +1,5 @@
 <h1>問診票</h1>
-<%= form_with model: @medical_examinations, url:medical_examination_index_path, method: :post, local: true  do |f| %>
+<%= form_with model:@medical_exam, url:medical_examination_index_path, method: :post, local: true  do |f| %>
   <p> 体重：<%=f.text_field :weight %> </p>
   <p> 体温：<%=f.text_field :body_temp %> </p>
   <p> 最高血圧:<%=f.text_field :systolic_bp %> </p>

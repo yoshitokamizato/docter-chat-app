@@ -19,7 +19,8 @@ class MedicalExaminationController < ApplicationController
   end
 
   def create
-    @medical_exam = MedicalExamination.new( weight: params[:weight],body_temp: params[:body_temp],systolic_bp: params[:systolic_bp],diastorlic_bp: params[:diastorlic_bp],user_id: current_user.id)
+    @medical_exam = MedicalExamination.new(medical_params)
+    @medical_exam.user_id = current_user.id
     if @medical_exam.save
       redirect_to action: :index
     end
@@ -37,5 +38,7 @@ class MedicalExaminationController < ApplicationController
   def destroy
   end
 
-
+  def medical_params
+    params.require(:medical_examination).permit(:weight,:body_temp,:systolic_bp,:diastorlic_bp)
+  end
 end
