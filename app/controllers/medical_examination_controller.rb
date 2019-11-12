@@ -19,7 +19,6 @@ class MedicalExaminationController < ApplicationController
 
   def create
     @medical_examination = MedicalExamination.new(medical_params)
-    @medical_examination.user_id = current_user.id
     if @medical_examination.save
       redirect_to action: :index
     end
@@ -38,6 +37,6 @@ class MedicalExaminationController < ApplicationController
   end
 
   def medical_params
-    params.require(:medical_examination).permit(:weight,:body_temp,:systolic_bp,:diastorlic_bp)
+    params.require(:medical_examination).permit(:weight,:body_temp,:systolic_bp,:diastorlic_bp).merge(user_id: current_user.id)
   end
 end
