@@ -10,18 +10,17 @@ class MedicalExaminationController < ApplicationController
       sum = sum + data
       gon.linedata << sum
     end
-
-    @medical_exams = MedicalExamination.all
+    @medical_examinations = MedicalExamination.all
   end
 
   def new
-    @medical_exam = MedicalExamination.new
+    @medical_examination= MedicalExamination.new
   end
 
   def create
-    @medical_exam = MedicalExamination.new(medical_params)
-    @medical_exam.user_id = current_user.id
-    if @medical_exam.save
+    @medical_examination = MedicalExamination.new(medical_params)
+    @medical_examination.user_id = current_user.id
+    if @medical_examination.save
       redirect_to action: :index
     end
   end
