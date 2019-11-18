@@ -1,0 +1,14 @@
+<h1><%= current_user.nickname %>の問診票</h1>
+<%= form_with model: @medical_examinations, url:medical_examination_index_path, method: :post  do |f| %>
+  <p> 体重：<%=f.text_field :weight %> </p>
+  <p> 体温：<%=f.text_field :body_temp %> </p>
+  <p> 最高血圧:<%=f.text_field :systolic_bp %> </p>
+  <p> 最低血圧:<%=f.text_field :diastorlic_bp %> </p>
+  <input type="submit" value="送信">
+<% end %>
+<% @medical_examinations.each do |exam| %>
+  <p><%= exam.user.nickname %></p>
+<% end %>
+<p><%=  %></p>
+<canvas id="myChart" width="200" height="100"></canvas>
+<script>draw_graph();</script> 
