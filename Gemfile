@@ -25,6 +25,9 @@ gem 'devise-i18n-views'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -46,5 +49,13 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: :production
+
+#developmentでsqliteを実行する
+group :development, :test do
+  gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
+end
+
+#production環境でpgを実行する
+group :production do
+  gem 'pg'
+end
