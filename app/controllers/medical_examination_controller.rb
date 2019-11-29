@@ -1,19 +1,14 @@
 class MedicalExaminationController < ApplicationController
 
   def index
-    sum = 0
-    gon.bardata = []
-    gon.linedata = []
-    6.times do |i|
-      data = rand(100.0)
-      gon.bardata << data
-      sum = sum + data
-      gon.linedata << sum
-    end
+    gon.labels = ["1月","2月","3月","4月","5月","6月"]
+    gon.data  =  MedicalExamination.where(user_id:1).pluck(:weight).to_a
     @medical_examinations = MedicalExamination.all
   end
 
   def new
+    gon.labels = ["1月","2月","3月","4月","5月","6月"]
+    gon.data = [10,11,12,13,14,15]
     @medical_examination= MedicalExamination.new
   end
 
