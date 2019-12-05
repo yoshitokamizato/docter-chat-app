@@ -54,6 +54,12 @@ ja:
     sessions:
       new:
         sign_in: "ログイン"
+      user:
+        signed_in: "ログインが完了しました。"
+        signed_out: "ログアウトしました。"
+    failure:
+      user:
+        not_found_in_database: "ログインに失敗しました。"
     shared:
       links:
         back: "戻る"
