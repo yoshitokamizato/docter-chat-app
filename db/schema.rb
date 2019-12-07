@@ -56,12 +56,12 @@ ActiveRecord::Schema.define(version: 2019_12_02_231637) do
   end
 
   create_table "medical_examinations", force: :cascade do |t|
+    t.integer "user_id"
     t.float "weight"
     t.float "body_temp"
     t.integer "systolic_bp"
     t.integer "diastorlic_bp"
     t.text "memo"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_231637) do
   create_table "medicines", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
