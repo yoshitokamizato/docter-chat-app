@@ -32,6 +32,6 @@ class MedicalExaminationController < ApplicationController
   end
 
   def medical_params
-    params.require(:medical_examination).permit(:weight,:body_temp,:systolic_bp,:diastorlic_bp).merge(user_id: current_user.id)
+    params.require(:medical_examination).permit(:weight,:body_temp,:systolic_bp,:diastorlic_bp,:height).merge(user_id: current_user.id)
   end
 end
