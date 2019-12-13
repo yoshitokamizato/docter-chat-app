@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_11_29_083741) do
-=======
 ActiveRecord::Schema.define(version: 2019_12_02_231637) do
->>>>>>> master
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -60,14 +56,15 @@ ActiveRecord::Schema.define(version: 2019_12_02_231637) do
   end
 
   create_table "medical_examinations", force: :cascade do |t|
-    t.integer "user_id"
     t.float "weight"
     t.float "body_temp"
     t.integer "systolic_bp"
     t.integer "diastorlic_bp"
     t.text "memo"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "height"
   end
 
   create_table "medicines", force: :cascade do |t|
@@ -83,7 +80,6 @@ ActiveRecord::Schema.define(version: 2019_12_02_231637) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "height"
     t.index ["medicine_id"], name: "index_user_medicines_on_medicine_id"
     t.index ["user_id"], name: "index_user_medicines_on_user_id"
   end
