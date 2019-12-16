@@ -1,8 +1,9 @@
 class MedicalExaminationController < ApplicationController
 
   def index
+    @user = User.find_by(id:current_user.id)
     gon.labels = ["1月","2月","3月","4月","5月","6月"]
-    gon.data  =  MedicalExamination.where(user_id:1).pluck(:weight).to_a
+    gon.data  =  MedicalExamination.where(user_id: @user).pluck(:weight).to_a
     @medical_examinations = MedicalExamination.all
   end
 
