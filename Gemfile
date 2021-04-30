@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'chart-js-rails', '~> 0.1.4'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'gon', '~> 6.2.0'
+gem 'gon', '~> 6.4.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
